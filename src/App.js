@@ -100,7 +100,7 @@ class App extends Component {
     return ( 
       <div className = 'App' >
       <h1> Actors Portfolio</h1>
-      <input className='search-1' type='search' onChange={this.changeinput} value={searching}/>
+      <input className='search-1' placeholder='Search here' type='search' onChange={this.changeinput} value={searching}/>
       <ul className='ul-container'>
         {searchRes.map(eachUser=>(
           <Search key={eachUser.uniqueNo} userDetails={eachUser}/>
