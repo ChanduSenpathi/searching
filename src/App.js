@@ -88,14 +88,18 @@ class App extends Component {
     allUsers:usersList
   }
   changeinput=(event)=>{
-    this.setState({searching:event.target.value})
+    let newSearch=event.target.value
+    // let tolowersearch=newSearch.toLowerCase()
+    // console.log(tolowersearch)
+    this.setState({searching:newSearch})
   }
   render() {
     const{allUsers,searching}=this.state
-    console.log(searching)
+    let tolowersearch=searching.toLowerCase()
+    console.log(tolowersearch)
     const searchRes=allUsers.filter((item)=>{
       let newName=item.name.toLowerCase()
-      return newName.includes(searching)
+      return newName.includes(tolowersearch)
     })
     return ( 
       <div className = 'App' >
